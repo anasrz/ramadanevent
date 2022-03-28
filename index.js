@@ -123,4 +123,16 @@ guild.channels.cache.get(chid)
     }, 3000)
   
 }
+const fetch = require('node-fetch')
+const axios = require('axios')
+async function time(country) {
+  
+  const response = await fetch(`https://api.aladhan.com/timingsByAddress/09-03-2015?address=${country}&method=8`,{method : 'GET'})
+  const result = response.json()
+  return result;
+    
+  
+}
+                    
+module.exports = time;
 module.exports = {quran,azkar}
